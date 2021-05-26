@@ -12,15 +12,15 @@
             <div class="card-body">
               <div class="form-group">
                 <label>Nama Barang</label>
-                <input required name="name" type="text" class="form-control" placeholder="Enter nama barang">
+                <input required value="<?= $data['name'] ?>" name="name" type="text" class="form-control" placeholder="Enter nama barang">
               </div>
               <div class="form-group">
                 <label>Stok Barang</label>
-                <input required name="stock" type="number" class="form-control" placeholder="Enter stok barang">
+                <input required value="<?= $data['name'] ?>" name="stock" type="number" class="form-control" placeholder="Enter stok barang">
               </div>
               <div class="form-group">
                 <label>Jenis Barang</label>
-                <input required name="productType" type="text" class="form-control" placeholder="Enter jenis barang">
+                <input required value="<?= $data['name'] ?>" name="productType" type="text" class="form-control" placeholder="Enter jenis barang">
               </div>
             </div>
             <!-- /.card-body -->

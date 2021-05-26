@@ -29,7 +29,7 @@
                       <td>'.$d['stock'].'</td>
                       <td>'.$d['productType'].'</td>
                       <td><a href='.base_url("Product/edit/".$d['id']).' class="btn btn-warning">Edit</a> 
-                       <a href='.base_url("Product".$d['id']).' class="btn btn-danger">Delete</a></td>
+                       <a href='.base_url("Product/delete/".$d['id']).' class="btn btn-danger">Delete</a></td>
                       </tr>';
                     $i++;
                   }
