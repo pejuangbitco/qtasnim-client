@@ -25,6 +25,8 @@
                 <?php 
                 $i = 1;
                   foreach($data as $d) {
+                    $d['sold'] = $d['sold'] ? $d['sold'] : 0;
+                    $d['tanggal'] = $d['tanggal'] ? $d['tanggal'] : "-";
                     echo '<tr>
                       <td>'.$i.'</td>
                       <td>'.$d['name'].'</td>
