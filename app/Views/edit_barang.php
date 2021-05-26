@@ -8,7 +8,7 @@
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          <form method="POST" action=<?= base_url('Product/save') ?>>
+          <form method="POST" action=<?= base_url('Product/save/'.$data['id']) ?>>
             <div class="card-body">
               <div class="form-group">
                 <label>Nama Barang</label>
@@ -16,11 +16,11 @@
               </div>
               <div class="form-group">
                 <label>Stok Barang</label>
-                <input required value="<?= $data['name'] ?>" name="stock" type="number" class="form-control" placeholder="Enter stok barang">
+                <input required value="<?= $data['stock'] ?>" name="stock" type="number" class="form-control" placeholder="Enter stok barang">
               </div>
               <div class="form-group">
                 <label>Jenis Barang</label>
-                <input required value="<?= $data['name'] ?>" name="productType" type="text" class="form-control" placeholder="Enter jenis barang">
+                <input required value="<?= $data['productType'] ?>" name="productType" type="text" class="form-control" placeholder="Enter jenis barang">
               </div>
             </div>
             <!-- /.card-body -->

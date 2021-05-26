@@ -30,8 +30,14 @@ class Product extends BaseController
     ]);
   }
 
-  public function save()
+  public function save($id = null)
   {
+    $method = 'POST';
+    if($id != null) {
+      $method = 'PUT';
+      $this->api .= $id;
+    }
+    
     $data = $this->request->getPost();
     $body = '{
       "name": "' . $data['name'] . '",
@@ -40,7 +46,8 @@ class Product extends BaseController
     }';
 
     $this->client->setBody($body);
-    $response = $this->client->request('POST', $this->api, [
+    
+    $this->client->request($method, $this->api, [
       'headers' => [
         'Accept'     => '*/*',
         'Content-Type' => 'application/json'
