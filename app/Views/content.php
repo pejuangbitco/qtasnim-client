@@ -5,10 +5,10 @@
 
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title"><?= $title ?></h3>
+          <a href=<?= base_url("Product/create") ?> class="btn btn-success">Create Data</a>
           </div>
           <!-- /.card-header -->
-          <div class="card-body">
+          <div class="card-body">            
             <table id="example1" class="table table-bordered table-striped">
               <thead>
                 <tr>
@@ -28,7 +28,8 @@
                       <td>'.$d['name'].'</td>
                       <td>'.$d['stock'].'</td>
                       <td>'.$d['productType'].'</td>
-                      <td>|Delete</td>
+                      <td><a href='.base_url("Product/edit/".$d['id']).' class="btn btn-warning">Edit</a> 
+                       <a href='.base_url("Product".$d['id']).' class="btn btn-danger">Delete</a></td>
                       </tr>';
                     $i++;
                   }
