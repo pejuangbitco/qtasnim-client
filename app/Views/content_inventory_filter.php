@@ -5,7 +5,7 @@
 
         <div class="card">
           <div class="card-header">
-          Bandingkan jenis barang Dari: <form method="get" action="<?= base_url('Home/filter') ?>"><input class="form-control" type="date" name="from"> Sampai: <input class="form-control" type="date" name="to"> <button type="submit" class="btn btn-primary">Submit</button></form>
+          Bandingkan jenis barang Dari: <form method="get" action="<?= base_url('Home/filter') ?>"><input class="form-control" value="<?php isset($_GET['from']) ? $_GET['from'] : null ?>" type="date" name="from"> Sampai: <input class="form-control" type="date" name="to" value="<?php isset($_GET['from']) ? $_GET['from'] : null ?>"> <button type="submit" class="btn btn-primary">Submit</button></form>
           </div>
           <!-- /.card-header -->
           <div class="card-body">            
